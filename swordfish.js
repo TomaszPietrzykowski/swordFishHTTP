@@ -22,7 +22,7 @@ SwordFish.prototype.getXHR = function(url, callback){
     this.http.send();
 }
 // Get request method with handling loader .getProgress(url, handleResponse, progIn, progOut)
-SwordFish.prototype.getProgress = function(url, callback, progIn, progOut){
+SwordFish.prototype.getProgress = function(url, callback, progIn, progOut=progIn){
         this.http.open('GET', url, true);    
         this.http.onerror = () => {
             callback({error: `error status: ${this.http.status}`})
