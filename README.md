@@ -55,7 +55,7 @@ _____________
 #### fetch data from *url* 
 #### - returns response data as a promise
 #### - data handled with _.then()_
-#### - takes one parameter - API url (string)
+#### - takes one parameter: API's url
 #
 ##### Syntax:
 
@@ -97,7 +97,7 @@ _____________
 # .getXHR(url, cb);
 #### fetch data from *url* 
 #### - data handled with callback function
-#### - takes two parameters - API url (string) and callback function for handling data
+#### - takes two parameters: API's url and callback function for handling data
 #
 ##### Syntax:
 
