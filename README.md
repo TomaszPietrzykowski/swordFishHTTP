@@ -1,12 +1,12 @@
 # swordFishHTTP
 
-custom, frond-end only, light-weight HTTP library
+## custom, frond-end only, light-weight HTTP library
 
-Initialize +++++++++++++++++
+### Initialize SwordFish
 
 const yourVar = new SwordFish;
 
-AVAILAIBLE METHODS XXXXXXXXXXX
+### AVAILAIBLE METHODS XXXXXXXXXXX
 
 XML Http Request **************
 
