@@ -61,9 +61,9 @@ _____________
 
 ```javascript
 const myVar = new SwordFish;
-const api = 'string';
+const url = 'string';
 
-myVar.get(api)
+myVar.get(url)
            .then((data) => { _code to handle data_ })
 ```
 
@@ -85,7 +85,7 @@ myVar.get(api)
 #### you may handle errors with _.catch()_
 
 ```javascript
-myVar.get(api)
+myVar.get(url)
            .then((data) => { _code to handle data_ })
            .catch((err) => { _code to handle err });
 ```
@@ -103,10 +103,10 @@ _____________
 
 ```javascript
 const myVar = new SwordFish;
-const api = 'string';
+const url = 'string';
 const handleData = (data) => { _code to handle data_ };
 
-myVar.get(api, handleData);
+myVar.get(url, handleData);
 
 ```
 
