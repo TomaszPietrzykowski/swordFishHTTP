@@ -4,7 +4,8 @@ current version 0.1.0
 custom, frond-end only, light-weight HTTP library
 
 ## Setup
-
+# 
+# 
 ### Import SwordFish
 
 Download minified file localy:
@@ -22,6 +23,8 @@ Paste reference above your scripting file:
 
 > const yourVar = new SwordFish;
 # 
+# 
+# 
 ## Availaible methods
 * .get()
 * .getSome()
@@ -35,12 +38,13 @@ Paste reference above your scripting file:
 * .loader()
 #
 ### .get();
- .get(url) - fetch data from *url* returns resopnse data as a prommise
+ .get(url) - fetch data from *url* returns resopnse data as a promise
 
 > `const myVar = new SwordFish`
 
 > `const api = 'https://jsonplaceholder.typicode.com/posts'`
 
+> 
 
 > `myVar.get('api')`
 
