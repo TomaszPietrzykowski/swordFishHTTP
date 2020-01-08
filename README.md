@@ -130,7 +130,9 @@ myVar.getXHR(api,showUsers);
 # 
 #### error handling
 in case of error _.getXHR()_ will return error object:
-#### { error: _"string"_ }
+```javascript
+ { error: _"string"_ }
+ ```
 you may check for errors within your callback:
 ```javascript
 const cb = (data) => { 
@@ -148,11 +150,11 @@ const cb = (data) => {
 _____________
 # 
 # .getProgress(url, cb, sp);
-#### fetch data from *url* with onpprogress event
-#### - data and spinner even handled with callback functions
+#### get data from api with onprogress event
+#### - data and spinner event handled with callback functions
 #### - takes 3 to 4 parameters: API's url and callback functions for handling data and spinner event
 #
-since fetch technology doesn't support onprogres method at this point, _.getProgress()_ uses callback function for handling response data, just like _.getXHR()_ method.
+since fetch technology doesn't support onprogres method at this point, _.getProgress()_ uses callback function for handling response data, just like _.getXHR()_ 
 ##### Syntax:
 
 ```javascript
@@ -170,7 +172,7 @@ myVar.getProgress(url, cb, sp);
 ```javascript
 const spinner = () => {
     document.getElementById('spinner').classList.toggle('hide');
-    document.getElementById('output').classList.toggle('hide');
+    document.getElementById('data-output').classList.toggle('hide');
 }
 
 
@@ -178,19 +180,17 @@ myVar.getProgress(api, logUsers, spinner);
 
 ```
 #
-if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument
-
+function _sp_ is being called twice: by onreadystate: 3 and by onreadystate: 4
+# 
+if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument:
 ```javascript
-const myVar = new SwordFish;
-const url = 'string';
-const cb = (data) => { _code to handle data_ };
 const sp1 = () => { _code to fire spinner event_ };
 const sp2 = () => { _code to stop spinner event_ };
 
 myVar.getProgress(url, cb, sp1, sp2);
 
 ```
-function _sp1_ will be called by onreadystate 3, and _sp2_ by onreadystate: 4
+function _sp1_ will be called by onreadystate: 3, and function _sp2_ by onreadystate: 4
 # 
 # 
 #### error handling
