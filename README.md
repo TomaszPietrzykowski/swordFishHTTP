@@ -4,6 +4,7 @@
 current version 0.1.0
 # 
 #
+Provides extremely short and convenient syntax in a form of set of methods for web API based frond-end proects. Suports fetch, async/await and xhr, offers handy methods foor handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data
 ______________
 ## Setup
 
