@@ -104,9 +104,9 @@ _____________
 ```javascript
 const myVar = new SwordFish;
 const url = 'string';
-const handleData = (data) => { _code to handle data_ };
+const cb = (data) => { _code to handle data_ };
 
-myVar.get(url, handleData);
+myVar.get(url, cb);
 
 ```
 
@@ -115,7 +115,7 @@ myVar.get(url, handleData);
 ```javascript
 const myVar = new SwordFish;
 const api = 'https://jsonplaceholder.typicode.com/users';
-const cb = (data) => { 
+const showUsers = (data) => { 
       const html = "";
       data.forEach((obj) => {
            html += `<li>User ${obj.id}: ${obj.firstName} ${obj.lastName}</li>`
@@ -124,7 +124,7 @@ const cb = (data) => {
 }
 
 
-myVar.getXHR(api,cb);
+myVar.getXHR(api,showUsers);
 
 ```
 # 
