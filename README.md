@@ -53,9 +53,9 @@ _____________
 # 
 # .get(url);
 #### fetch data from *url* 
-#### - takes one parameter - API url (string)
 #### - returns response data as a promise
 #### - data handled with _.then()_
+#### - takes one parameter - API url (string)
 #
 ##### Syntax:
 
