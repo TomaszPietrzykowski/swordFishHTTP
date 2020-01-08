@@ -52,8 +52,8 @@ ___________
 const myVar = new SwordFish;
 const api = 'https://jsonplaceholder.typicode.com/posts';
 
-myVar.get('api')`
-    .then((data) => { _code to handle data_ })
+myVar.get(api)
+           .then((data) => { _code to handle data_ })
 ```
 # 
 # 
