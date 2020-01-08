@@ -128,10 +128,10 @@ myVar.getXHR(api,showUsers);
 
 ```
 # 
-#### error handling
+#### error handling with .getXHR()
 in case of error _.getXHR()_ will return error object:
 ```javascript
- { error: _"string"_ }
+ { error: "string" }
  ```
 you may check for errors within your callback:
 ```javascript
