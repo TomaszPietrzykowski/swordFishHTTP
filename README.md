@@ -98,8 +98,6 @@ _____________
 #### fetch data from *url* 
 #### - data handled with callback function
 #### - takes two parameters - API url (string) and callback function for handling data
-#### - returns response data as a promise
-
 #
 ##### Syntax:
 
@@ -130,7 +128,8 @@ myVar.getXHR(api,cb);
 
 ```
 # 
-#### in case of error .getXHR() will return error object:
+#### error handling
+in case of error _.getXHR()_ will return error object:
 #### { error: _"string"_ }
 you may check for errors within your callback:
 ```javascript
@@ -146,4 +145,7 @@ const cb = (data) => {
 }
 ```
 # 
-
+### * * * DOCUMENTATION UNDER CONSTRUCTION * * *
+#
+[Contribute to project]('http://www.barracudadev.com')
+#
