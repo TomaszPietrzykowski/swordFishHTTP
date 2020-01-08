@@ -61,7 +61,7 @@ _____________
 
 ```javascript
 const myVar = new SwordFish;
-const api = 'https://jsonplaceholder.typicode.com/posts';
+const api = 'string';
 
 myVar.get(api)
            .then((data) => { _code to handle data_ })
@@ -103,7 +103,7 @@ _____________
 
 ```javascript
 const myVar = new SwordFish;
-const api = 'https://jsonplaceholder.typicode.com/posts';
+const api = 'string';
 const handleData = (data) => { _code to handle data_ };
 
 myVar.get(api, handleData);
