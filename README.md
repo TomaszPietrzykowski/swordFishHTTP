@@ -14,8 +14,8 @@ Download minified file localy:
 
 Paste reference above your scripting file:
 ```javascript
-<script>sworfish.min.js</script>
-<script>myApp.js</script>
+<script> sworfish.min.js </script>
+<script> myApp.js </script>
 ```
 
 ### or Use CDN
@@ -49,8 +49,8 @@ ___________
  .get(url) - fetch data from *url* returns resopnse data as a promise
 
 ```javascript
-const myVar = new SwordFish
-const api = 'https://jsonplaceholder.typicode.com/posts'
+const myVar = new SwordFish;
+const api = 'https://jsonplaceholder.typicode.com/posts';
 
 myVar.get('api')`
     .then((data) => { _code to handle data_ })
