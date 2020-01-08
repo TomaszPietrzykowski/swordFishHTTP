@@ -4,9 +4,9 @@
 current version 0.1.0
 # 
 #
-Provides extremely short and convenient syntax in a form of set of methods for web API based frond-end projects. Suports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
+Provides short and convenient syntax in a form of set of methods for web API based projects. Suports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
 # 
-##### at a current stage SwordFish project is a part of education curve, every input very much welcomme
+
 ______________
 ## Setup
 
@@ -38,6 +38,7 @@ const yourVar = new SwordFish;
 ___________
 ## Availaible methods
 * .get()
+* .getXHR()
 * .getSome()
 * .getRaw()
 * .getProgress()
@@ -50,7 +51,10 @@ ___________
 #
 # 
 _____________
-## .get();
+# READ RESOURCE METHODS
+_____________
+# 
+# .get();
 #### fetch data from *url* 
 #### returns resopnse data as a promise
 #### data handled by .tnen
@@ -86,7 +90,8 @@ myVar.get(api)
            .catch((err) => { _code to handle err });
 ```
 # 
- *** DOCUM0ENTATION UNDER CONSTRUCTION ***
+#### if you don't use.catch() error will be still visible in console as _Uncaught_
+ *** DOCUMENTATION UNDER CONSTRUCTION ***
  # 
  # 
 [contribute to project](http://www.barracudadev.com)
