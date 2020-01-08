@@ -185,7 +185,7 @@ function _spinner_ is being called twice: by onreadystate: 3 and by onreadystate
 if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument:
 ```javascript
 const sp1 = () => { _code to fire spinner event_ };
-const sp2 = () => { _code to stop spinner event_ };
+const sp2 = () => { _code to stop spinner event and perhaps do sth else_ };
 
 myVar.getProgress(url, cb, sp1, sp2);
 
