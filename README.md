@@ -45,8 +45,12 @@ ___________
 * .del()
 * .loader()
 #
-### .get();
- .get(url) - fetch data from *url* returns resopnse data as a promise
+# 
+_____________
+## .get();
+#### fetch data from *url* 
+#### returns resopnse data as a promise
+#### data handled by .tnen
 
 ```javascript
 const myVar = new SwordFish;
@@ -56,8 +60,15 @@ myVar.get(api)
            .then((data) => { _code to handle data_ })
 ```
 # 
+#### you may handle errors with .catch
+
+```javascript
+myVar.get(api)
+           .then((data) => { _code to handle data_ })
+           .catch((err) => { _code to handle err });
+```
 # 
- *** DOCUMENTATION UNDER CONSTRUCTION ***
+ *** DOCUM0ENTATION UNDER CONSTRUCTION ***
  # 
  # 
 [contribute to project](http://www.barracudadev.com)
