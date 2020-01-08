@@ -1,7 +1,7 @@
 # SwordFishHTTP
+#
+#### custom, frond-end only, light-weight HTTP library
 current version 0.1.0
-
-custom, frond-end only, light-weight HTTP library
 # 
 #
 ______________
