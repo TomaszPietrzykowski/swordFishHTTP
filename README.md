@@ -52,7 +52,7 @@ _____________
 _____________
 # 
 # .get(url);
-#### fetch data from *url* 
+#### get data from api 
 #### - returns response data as a promise
 #### - data handled with _.then()_
 #### - takes one parameter: API's url
@@ -95,7 +95,7 @@ if you don't use _.catch()_ error will be still visible in console as _Uncaught_
 _____________
 # 
 # .getXHR(url, cb);
-#### fetch data from *url* 
+#### get data from api 
 #### - data handled with callback function
 #### - takes two parameters: API's url and callback function for handling data
 #
@@ -176,11 +176,11 @@ const spinner = () => {
 }
 
 
-myVar.getProgress(api, logUsers, spinner);
+myVar.getProgress(api, showUsers, spinner);
 
 ```
 #
-function _sp_ is being called twice: by onreadystate: 3 and by onreadystate: 4
+function _spinner_ is being called twice: by onreadystate: 3 and by onreadystate: 4
 # 
 if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument:
 ```javascript
@@ -194,7 +194,7 @@ function _sp1_ will be called by onreadystate: 3, and function _sp2_ by onreadys
 # 
 # 
 #### error handling
-similar to  _.getXHR()_ method, returns error object
+similar to  _.getXHR()_ method, returns an error object
 #
 ### * * * DOCUMENTATION UNDER CONSTRUCTION * * *
 #
