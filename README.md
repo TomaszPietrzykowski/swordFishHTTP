@@ -37,7 +37,7 @@ current version 0.1.0
 ### .get();
  .get(url) - fetch data from *url* returns resopnse data as a prommise
 
-> 'yourVar.get('https://jsonplaceholder.typicode.com/posts').then(() => { *code to handle data* })'
-> '   .then((data) => { *code to handle data* });'
+> ```yourVar.get('https://jsonplaceholder.typicode.com/posts').then(() => { *code to handle data* })
+>              .then((data) => { *code to handle data* });```
 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
