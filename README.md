@@ -145,6 +145,57 @@ const cb = (data) => {
 }
 ```
 # 
+_____________
+# 
+# .getProgress(url, cb, sp);
+#### fetch data from *url* with onpprogress event
+#### - data and spinner even handled with callback functions
+#### - takes 3 to 4 parameters: API's url and callback functions for handling data and spinner event
+#
+since fetch technology doesn't support onprogres method at this point, _.getProgress()_ uses callback function for handling response data, just like _.getXHR()_ method.
+##### Syntax:
+
+```javascript
+const myVar = new SwordFish;
+const url = 'string';
+const cb = (data) => { _code to handle data_ };
+const sp = () => { _code to toggle spinner event_ }
+
+myVar.getProgress(url, cb, sp);
+
+```
+# 
+##### Example:
+
+```javascript
+const spinner = () => {
+    document.getElementById('spinner').classList.toggle('hide');
+    document.getElementById('output').classList.toggle('hide');
+}
+
+
+myVar.getProgress(api, logUsers, spinner);
+
+```
+#
+if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument
+
+```javascript
+const myVar = new SwordFish;
+const url = 'string';
+const cb = (data) => { _code to handle data_ };
+const sp1 = () => { _code to fire spinner event_ };
+const sp2 = () => { _code to stop spinner event_ };
+
+myVar.getProgress(url, cb, sp1, sp2);
+
+```
+function _sp1_ will be called by onreadystate 3, and _sp2_ by onreadystate: 4
+# 
+# 
+#### error handling
+similar to  _.getXHR()_ method, returns error object
+#
 ### * * * DOCUMENTATION UNDER CONSTRUCTION * * *
 #
 [Contribute to project]('http://www.barracudadev.com')
