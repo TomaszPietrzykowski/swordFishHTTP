@@ -2,10 +2,11 @@
 current version 0.1.0
 
 custom, frond-end only, light-weight HTTP library
-
+# 
+#
+______________
 ## Setup
-# 
-# 
+
 ### Import SwordFish
 
 Download minified file localy:
@@ -25,6 +26,7 @@ Paste reference above your scripting file:
 # 
 # 
 # 
+___________
 ## Availaible methods
 * .get()
 * .getSome()
@@ -50,4 +52,8 @@ Paste reference above your scripting file:
 
 > `    .then((data) => { _code to handle data_ })`
 # 
+# 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
+ # 
+ # 
+[contribute to proect](http://www.barracudadev.com)
