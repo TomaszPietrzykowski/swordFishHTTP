@@ -51,9 +51,9 @@ _____________
 # READ RESOURCE METHODS
 _____________
 # 
-# .get();
+# .get(url);
 #### fetch data from *url* 
-#### - takes one parameter - API url (type: string)
+#### - takes one parameter - API url (string)
 #### - returns response data as a promise
 #### - data handled with _.then()_
 #
@@ -92,6 +92,58 @@ myVar.get(api)
 # 
 #### if you don't use _.catch()_ error will be still visible in console as _Uncaught_
 # 
- *** DOCUMENTATION UNDER CONSTRUCTION ***
- # 
-[contribute to project](http://www.barracudadev.com)
+_____________
+# 
+# .getXHR(url, cb);
+#### fetch data from *url* 
+#### - data handled with callback function
+#### - takes two parameters - API url (string) and callback function for handling data
+#### - returns response data as a promise
+
+#
+##### Syntax:
+
+```javascript
+const myVar = new SwordFish;
+const api = 'https://jsonplaceholder.typicode.com/posts';
+const handleData = (data) => { _code to handle data_ };
+
+myVar.get(api, handleData);
+
+```
+
+##### Example:
+
+```javascript
+const myVar = new SwordFish;
+const api = 'https://jsonplaceholder.typicode.com/users';
+const cb = (data) => { 
+      const html = "";
+      data.forEach((obj) => {
+           html += `<li>User: ${obj.firstName} ${obj.lastName}</li>`
+           });
+      document.querySelector("#users-list").innerHTML = `<ul>${html}</ul>`
+}
+
+
+myVar.getXHR(api,cb);
+
+```
+# 
+#### in case of error .getXHR() will return error object:
+#### { error: _"string"_ }
+you may check for errors within your callback:
+```javascript
+const cb = (data) => { 
+       if(data.error){ 
+       // don't bother:
+       return
+       // or handle error:
+       console.log(data.error)
+       } else {
+       // handle data
+       }
+}
+```
+# 
+
