@@ -4,7 +4,7 @@
 current version 0.1.0
 # 
 #
-Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
+Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders), comes with built-in loader animating data fields awaiting data.
 # 
 ______________
 ## Setup
