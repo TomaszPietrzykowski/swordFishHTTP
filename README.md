@@ -5,9 +5,9 @@ current version 0.1.0
 
 ## Setup
 
-[Download SwordFish](http://www.barracudadev.com)
-
 ### Import SwordFish
+
+[Download SwordFish](http://www.barracudadev.com)
 
 > `<script>sworfish.min.js</script>`
 > `<script>myApp.js</script>`
@@ -30,13 +30,14 @@ current version 0.1.0
 * .put()
 * .patch()
 * .del()
-* *built-in loader function .loader()
+* .loader()
 
 ## XML Http Request
 
 ### .get();
- .get(url, fn) - fetch data from url and handle response with callback - fn;
+ .get(url) - fetch data from *url* returns resopnse data as a prommise
 
- yourVar.get('https://jsonplaceholder.typicode.com/posts', handleResponse);
+> 'yourVar.get('https://jsonplaceholder.typicode.com/posts').then(() => { *code to handle data* })'
+> '   .then((data) => { *code to handle data* });'
 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
