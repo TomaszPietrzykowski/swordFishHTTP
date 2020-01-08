@@ -42,7 +42,7 @@ current version 0.1.0
 
 > `myVar.get('api')`
 
-> `.then((data) => { *code to handle data* })`
+> `     .then((data) => { *code to handle data* })`
 
 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
