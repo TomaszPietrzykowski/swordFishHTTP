@@ -39,9 +39,10 @@ current version 0.1.0
 
 > `const myVar = new SwordFish`
 > `const api = 'https://jsonplaceholder.typicode.com/posts'`
->
+
 > `myVar.get('api')`
+
 > `.then((data) => { *code to handle data* })`
->
+
 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
