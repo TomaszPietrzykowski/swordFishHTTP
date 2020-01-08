@@ -20,7 +20,7 @@ Paste reference above your scripting file:
 <script> myApp.js </script>
 ```
 
-### or Use CDN
+### or use CDN
 
 ```javascript
 <script src="https://www.barracudadev.com/sworfish/0.1.0/swordfish.min.js"></script>
