@@ -2,15 +2,18 @@
 
 ## custom, frond-end only, light-weight HTTP library
 
-### Initialize SwordFish
+## Initialize SwordFish
 
 const yourVar = new SwordFish;
 
-### AVAILAIBLE METHODS XXXXXXXXXXX
+## Availaible methods
+* .get()
+* .getRaw()
+* .getPProgress()
 
-XML Http Request **************
+## XML Http Request
 
-.get();
+### .get();
 // .get(url, fn) - fetch data from url and handle response with callback - fn;
 
 // yourVar.get('https://jsonplaceholder.typicode.com/posts', handleResponse);
