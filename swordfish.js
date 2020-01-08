@@ -9,7 +9,7 @@ function SwordFish(){
     this.http = new XMLHttpRequest();
 }
 // Get request method .get(url, handleResponse)
-SwordFish.prototype.get = function(url, callback){
+SwordFish.prototype.getXHR = function(url, callback){
         this.http.open('GET', url, true);    
         this.http.onerror = () => {
             callback({error: `error status: ${this.http.status}`})
@@ -44,6 +44,7 @@ SwordFish.prototype.getRaw = function(url, callback){
     this.http.send();
 }
 //  POST METHODS
+//  postStatus(); posts resource and returns http status
 SwordFish.prototype.post = function(url, data, callback){
     this.http.open('POST', url, true);
     this.http.setRequestHeader('Content-type', 'application/json');
@@ -71,9 +72,9 @@ SwordFish.prototype.put = function(url, data, callback){
     this.http.onload = () => callback(JSON.parse(this.http.responseText));
     this.http.send(JSON.stringify(data));
 };
-//  postStatus(); posts resource and returns http status
+//  patch(); updates resource and returns http status
 SwordFish.prototype.putStatus = function(url, data, callback){
-    this.http.open('PUT', url, true);
+    this.http.open('PATCH', url, true);
     this.http.setRequestHeader('Content-type', 'application/json');
     this.http.onerror = () => callback(this.http.status);
     this.http.onload = () => callback(this.http.status);   
