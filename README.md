@@ -37,6 +37,11 @@ current version 0.1.0
 ### .get();
  .get(url) - fetch data from *url* returns resopnse data as a prommise
 
-> `yourVar.get('https://jsonplaceholder.typicode.com/posts').then(() => { *code to handle data* })<br>.then((data) => { *code to handle data* });`
+> `const myVar = new SwordFish`
+> `const api = 'https://jsonplaceholder.typicode.com/posts'`
+>
+> `myVar.get('api')`
+> `.then((data) => { *code to handle data* })`
+>
 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
