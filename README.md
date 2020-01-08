@@ -4,7 +4,9 @@
 current version 0.1.0
 # 
 #
-Provides extremely short and convenient syntax in a form of set of methods for web API based frond-end proects. Suports fetch, async/await and xhr, offers handy methods foor handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data
+Provides extremely short and convenient syntax in a form of set of methods for web API based frond-end projects. Suports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
+# 
+##### at a current stage SwordFish project is a part of education curve, every input very much welcomme
 ______________
 ## Setup
 
