@@ -59,6 +59,21 @@ const api = 'https://jsonplaceholder.typicode.com/posts';
 myVar.get(api)
            .then((data) => { _code to handle data_ })
 ```
+
+##### example:
+
+```javascript
+const myVar = new SwordFish;
+const api = 'https://jsonplaceholder.typicode.com/users';
+const emails = []:
+
+myVar.get(api)
+   .then((data) => { 
+      data.forEach((obj) => {
+           emails.push(obj.email);
+           });
+      })
+```
 # 
 #### you may handle errors with .catch
 
