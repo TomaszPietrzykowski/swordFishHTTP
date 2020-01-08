@@ -1,6 +1,6 @@
 # SwordFishHTTP
 #
-#### custom, frond-end only, light-weight HTTP library
+#### custom, light-weight, frontend HTTP library
 current version 0.1.0
 # 
 #
@@ -82,7 +82,7 @@ myVar.get(api)
       })
 ```
 # 
-#### you may handle errors with _.catch()
+#### you may handle errors with _.catch()_
 
 ```javascript
 myVar.get(api)
