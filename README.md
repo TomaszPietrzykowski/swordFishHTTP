@@ -12,12 +12,12 @@
 
 ### Import SwordFish
 
-> `<script>sworfish.min.js</script>
-> <script>myApp.js</script>`
+> `<script>sworfish.min.js</script>`
+> `<script>myApp.js</script>`
 
 ### Initialize SwordFish
 
-const yourVar = new SwordFish;
+> const yourVar = new SwordFish;
 
 ## Availaible methods
 * .get()
