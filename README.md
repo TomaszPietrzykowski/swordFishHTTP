@@ -8,12 +8,12 @@
 
 ### or Use CDN
 
-> <script src="https://www.barracudadev.com/sworfish/0.1.0/swordfish.min.js"></script>
+> `<script src="https://www.barracudadev.com/sworfish/0.1.0/swordfish.min.js"></script>`
 
 ### Import SwordFish
 
-> <script>sworfish.min.js</script>
-> <script>myApp.js</script>
+> `<script>sworfish.min.js</script>
+> <script>myApp.js</script>`
 
 ### Initialize SwordFish
 
