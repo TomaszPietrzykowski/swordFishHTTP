@@ -6,7 +6,6 @@ current version 0.1.0
 #
 Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
 # 
-
 ______________
 ## Setup
 
@@ -33,10 +32,9 @@ Paste reference above your scripting file:
 const yourVar = new SwordFish;
 ```
 # 
-# 
-# 
 ___________
 ## Availaible methods
+# 
 * .get()
 * .getXHR()
 * .getSome()
@@ -49,16 +47,17 @@ ___________
 * .del()
 * .loader()
 #
-# 
 _____________
 # READ RESOURCE METHODS
 _____________
 # 
 # .get();
 #### fetch data from *url* 
-#### takes one parameter - API url (type: string)
-#### returns response data as a promise
-#### data handled by __.then__
+#### - takes one parameter - API url (type: string)
+#### - returns response data as a promise
+#### - data handled with _.then()_
+#
+##### Syntax:
 
 ```javascript
 const myVar = new SwordFish;
@@ -68,7 +67,7 @@ myVar.get(api)
            .then((data) => { _code to handle data_ })
 ```
 
-##### example:
+##### Example:
 
 ```javascript
 const myVar = new SwordFish;
@@ -83,7 +82,7 @@ myVar.get(api)
       })
 ```
 # 
-#### you may handle errors with __.catch__
+#### you may handle errors with _.catch()
 
 ```javascript
 myVar.get(api)
@@ -91,8 +90,8 @@ myVar.get(api)
            .catch((err) => { _code to handle err });
 ```
 # 
-#### if you don't use **.catch()** error will be still visible in console as _Uncaught_
+#### if you don't use _.catch()_ error will be still visible in console as _Uncaught_
+# 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
- # 
  # 
 [contribute to project](http://www.barracudadev.com)
