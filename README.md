@@ -42,15 +42,13 @@ ___________
 ### .get();
  .get(url) - fetch data from *url* returns resopnse data as a promise
 
-> `const myVar = new SwordFish`
+ ```javascript
+ const myVar = new SwordFish
+`const api = 'https://jsonplaceholder.typicode.com/posts'
 
-> `const api = 'https://jsonplaceholder.typicode.com/posts'`
-
-> 
-
-> `myVar.get('api')`
-
-> `    .then((data) => { _code to handle data_ })`
+myVar.get('api')`
+    .then((data) => { _code to handle data_ })
+```
 # 
 # 
  *** DOCUMENTATION UNDER CONSTRUCTION ***
