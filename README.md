@@ -118,9 +118,9 @@ const api = 'https://jsonplaceholder.typicode.com/users';
 const cb = (data) => { 
       const html = "";
       data.forEach((obj) => {
-           html += `<li>User: ${obj.firstName} ${obj.lastName}</li>`
+           html += `<li>User ${obj.id}: ${obj.firstName} ${obj.lastName}</li>`
            });
-      document.querySelector("#users-list").innerHTML = `<ul>${html}</ul>`
+      document.querySelector("#users-list").innerHTML = `<ul>${html}</ul>`;
 }
 
 
