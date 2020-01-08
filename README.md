@@ -72,7 +72,7 @@ myVar.get(api)
 ```javascript
 const myVar = new SwordFish;
 const api = 'https://jsonplaceholder.typicode.com/users';
-const emails = []:
+const emails = [];
 
 myVar.get(api)
    .then((data) => { 
