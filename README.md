@@ -4,7 +4,7 @@
 current version 0.1.0
 # 
 #
-Provides short and convenient syntax in a form of set of methods for web API based projects. Suports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
+Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders..), comes with built-in loader animating data filds awaiting data.
 # 
 
 ______________
@@ -56,8 +56,9 @@ _____________
 # 
 # .get();
 #### fetch data from *url* 
-#### returns resopnse data as a promise
-#### data handled by .tnen
+#### takes one parameter - API url (type: string)
+#### returns response data as a promise
+#### data handled by __.then__
 
 ```javascript
 const myVar = new SwordFish;
@@ -82,7 +83,7 @@ myVar.get(api)
       })
 ```
 # 
-#### you may handle errors with .catch
+#### you may handle errors with __.catch__
 
 ```javascript
 myVar.get(api)
@@ -90,7 +91,7 @@ myVar.get(api)
            .catch((err) => { _code to handle err });
 ```
 # 
-#### if you don't use.catch() error will be still visible in console as _Uncaught_
+#### if you don't use **.catch()** error will be still visible in console as _Uncaught_
  *** DOCUMENTATION UNDER CONSTRUCTION ***
  # 
  # 
