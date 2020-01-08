@@ -23,7 +23,7 @@ Paste reference above your scripting file:
 ### or use CDN
 
 ```javascript
-<script src="https://www.barracudadev.com/sworfish/0.1.0/swordfish.min.js"></script>
+<script src="https://www.barracudadev.com/swordfish/0.1.0/swordfish.min.js"></script>
 ```
 # 
 ### Initialize SwordFish
