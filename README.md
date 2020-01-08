@@ -90,7 +90,7 @@ myVar.get(url)
            .catch((err) => { _code to handle err });
 ```
 # 
-#### if you don't use _.catch()_ error will be still visible in console as _Uncaught_
+if you don't use _.catch()_ error will be still visible in console as _Uncaught_
 # 
 _____________
 # 
