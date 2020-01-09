@@ -41,6 +41,7 @@ DOM manipulation methods:
 * $FE()
 * $FShow()
 * $FClass()
+# 
 HTTP methods:
 * .get()
 * .getXHR()
@@ -82,12 +83,12 @@ this.email = $F('#email-input').value;
 
 const commment = $F('#input-field').value;
 ```
-**$F(id)** is basicly convenience syntax for **document.querySelector(id)**. Saves some typing, doesn't it. Just like querySelector, takes string with **.class** or **#id** notation. Single DOM element can be passed as well: **$F("h1")**. If passed element appears in DOM more then ones, only the first element will be returned. That allows you to grab first element of many if you wish so. For handling multiple elements we recommend using other **$F_()** methods.
+**$F(id)** is basicly convenience syntax for **document.querySelector(id)**. Just like querySelector, takes string with **.class** or **#id** notation. Single DOM element can be passed as well: **$F('h1')**. If passed element appears in DOM more then ones, only the first element will be returned. That allows you to grab first element of many if you wish so. For handling multiple elements we recommend using other **$F_()** methods.
 # 
 _____________
 # 
 # $FAll(selector);
-* takes querySelector or array of querySelectors as an argument
+* takes querySelector or an array of querySelectors as an argument
 * returns an array of DOM elements
 ##### Syntax:
 
