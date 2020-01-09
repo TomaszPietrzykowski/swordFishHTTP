@@ -61,7 +61,7 @@ _____________
 All of **$F** methods are availaible without initializing new SwordFish
 _____________
 # 
-# $F(selector);
+## $F(selector);
 handy syntax for grabbing DOM elements by class, id or element name
 * takes querySelector string as an argument
 * returns a DOM element
@@ -83,11 +83,10 @@ this.email = $F('#email-input').value;
 
 const commment = $F('#input-field').value;
 ```
-**$F(id)** is basicly convenience syntax for **document.querySelector(id)**. Just like querySelector, takes string with **.class** or **#id** notation. Single DOM element can be passed as well: **$F('h1')**. If passed element appears in DOM more then ones, only the first element will be returned. That allows you to grab first element of many if you wish so. For handling multiple elements we recommend using other **$F_()** methods.
-# 
+**$F(id)** is basicly convenience syntax for **document.querySelector(id)**. Just like querySelector, takes string with **.class** or **#id** notation. Single DOM element can be passed as well: **$F('h1')**. If passed element appears in DOM more then ones, only the first element will be returned. That allows you to grab the first element of many if you wish so. Use other **$F_()** methods for multiple elements.
 _____________
 # 
-# $FAll(selector);
+## $FAll(selector);
 * takes querySelector or an array of querySelectors as an argument
 * returns an array of DOM elements
 ##### Syntax:
@@ -137,17 +136,17 @@ arr2 = [
 ```
 # 
 _____________
-# READ RESOURCE METHODS
+# HTTP METHODS
+______________
+# Read resource
 _____________
 # 
-# .get(url);
-#### get data from api 
-#### - returns response data as a promise
-#### - data handled with _.then()_
-#### - takes one parameter: API's url
-#
+## .get(url);
+get data from api 
+* returns response data as a promise
+* takes one argument: API's url
+* data handled with _.then()_
 ##### Syntax:
-
 ```javascript
 const myVar = new SwordFish;
 const url = 'string';
@@ -155,7 +154,7 @@ const url = 'string';
 myVar.get(url)
            .then((data) => { _code to handle data_ })
 ```
-
+#
 ##### Example:
 
 ```javascript
@@ -171,7 +170,7 @@ myVar.get(api)
       })
 ```
 # 
-#### you may handle errors with _.catch()_
+you may handle errors with **.catch()**
 
 ```javascript
 myVar.get(url)
@@ -179,14 +178,13 @@ myVar.get(url)
            .catch((err) => { _code to handle err });
 ```
 # 
-if you don't use _.catch()_ error will be still visible in console as _Uncaught_
-# 
+if you don't use **.catch()** error will be still visible in console as **Uncaught**
 _____________
 # 
-# .getXHR(url, cb);
-#### get data from api 
-#### - data handled with callback function
-#### - takes two parameters: API's url and callback function for handling data
+## .getXHR(url, cb);
+get data from api 
+* takes two arguments: API's url and callback 
+* data handled with callback
 #
 ##### Syntax:
 
@@ -217,8 +215,8 @@ myVar.getXHR(api,showUsers);
 
 ```
 # 
-#### error handling with .getXHR()
-in case of error _.getXHR()_ will return error object:
+##### Error handling with .getXHR()
+in case of error **.getXHR()** will return an error object:
 ```javascript
  { error: "string" }
  ```
@@ -235,15 +233,14 @@ const cb = (data) => {
        }
 }
 ```
-# 
 _____________
 # 
-# .getProgress(url, cb, sp);
-#### get data from api with onprogress event
-#### - data and spinner event handled with callback functions
-#### - takes 3 to 4 parameters: API's url and callback functions for handling data and spinner event
-#
-since fetch technology doesn't support onprogres method at this point, _.getProgress()_ uses callback function for handling response data, just like _.getXHR()_ 
+## .getProgress(url, cb, sp);
+get data from api with onprogress event
+* takes 3 to 4 parameters: API's url and callback functions for handling data and spinner event
+* data and spinner event handled with callback functions
+
+since fetch technology doesn't support onprogres method at this point, **.getProgress()** uses callback function for handling response data, just like **.getXHR()**
 ##### Syntax:
 
 ```javascript
@@ -269,7 +266,7 @@ myVar.getProgress(api, showUsers, spinner);
 
 ```
 #
-function _spinner_ is being called twice: by onreadystate: 3 and by onreadystate: 4
+function **spinner** is being called twice: by onreadystate: 3 and by onreadystate: 4
 # 
 if you whant to use different code to trigger and stop onprogress event simply pass additional callback as a 4th argument:
 ```javascript
