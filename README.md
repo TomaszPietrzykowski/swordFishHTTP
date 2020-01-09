@@ -4,7 +4,7 @@
 current version 0.1.0
 # 
 #
-Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders), comes with built-in loader animating data fields awaiting data.
+Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders), comes with built-in loader and toolbox of DOM manippulation methods.
 # 
 ______________
 ## Setup
@@ -35,6 +35,9 @@ const yourVar = new SwordFish;
 ___________
 ## Availaible methods
 # 
+* $F()
+* $FA()
+* $FX()
 * .get()
 * .getXHR()
 * .getSome()
@@ -47,6 +50,34 @@ ___________
 * .del()
 * .loader()
 #
+_____________
+# DOM MANIPULATION METHODS - $wordFish Selectors
+_____________
+# 
+# $F(qSel);
+#### handy syntax for grabbing DOM elements by class, id or element name
+#### takes querySelector string as an argument
+#
+##### Syntax:
+
+```javascript
+$F('querySelector');
+```
+
+##### Example:
+
+```javascript
+// direct execution
+$F('#title').style.color = 'white;
+
+$F('.action-btn').addEventListener('click', cb);
+
+// variable assignment
+this.email = $F('#email-input').value;
+const commment = $F('#input-field').value;
+```
+_$F(id)_ is basicly syntactic sugar for _document.querySelector(id)_. Saves some typing, doesn't it. Just like qurySelector takes string with _.class_ or _#id_ notation. Single DOM element can be passed as well: $F("h1"); If passed element appears in DOM more then ones, only the first element will be returned. For handling multiple elements with element and class name _$FA()_ and _$FX()_ methods should be used
+# 
 _____________
 # READ RESOURCE METHODS
 _____________
