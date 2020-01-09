@@ -7,12 +7,25 @@
  * * * * * * * * * * * * * * * * * * * * * * * 
 **/
 !function(global){
-// Attach $wordFishSelector method to window object:
+/* 
+ * Attach $wordFish Selector methods to window object 
+ */
     global.$F = function(sel){
       const el = document.querySelector(`${sel}`);
       return el
     }
-    // SwordFish constructor
+    global.$FA = function(sel){
+      const nodeList = document.querySelectorAll(`${sel}`);
+      return Array.from(nodeList)
+    }
+    global.$FX = function(sel, cb){
+      const nodeList = document.querySelectorAll(`${sel}`);
+      const DOMarray = Array.from(nodeList);
+      DOMarray.forEach(cb);
+      }
+    /* 
+     *  SwordFish constructor 
+     */
     class SwordFish {
         constructor() {
             this.http = new XMLHttpRequest();
@@ -24,6 +37,7 @@
             return response;
         }
         // GET request with async/await with limit param
+        // to be rebuilt to fetch limit rather then dislplay limit
         async getSome(url, limit){
             const serverResponse = await fetch(url);
             const response = await serverResponse.json();

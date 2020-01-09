@@ -1,4 +1,4 @@
-// SwordFish.js HTTP Library Documentation
+// SwordFish.js HTTP Library WorkSheet
 
 // Initialize swordfish
 const http = new SwordFish;
@@ -14,11 +14,10 @@ const url6 = 'https://reqres.in/api/users/2';
 // const errObj = {error: 'string'} - can be returned from methods
 
 // function definitions 
-// const handleResponse = (res) => {console.log(res)};
-// const progIn = () => {console.log('onprogres fired')};
-// const progOut = () => {console.log('onprogres finished')};
-// const progToggle = () => {console.log('onprogres toggled')};
-
+const logRes = (res) => {console.log(res)};
+const progIn = () => {console.log('onprogres fired')};
+const progOut = () => {console.log('onprogres finished')};
+const progToggle = () => {console.log('onprogres toggled')};
 const handleRes = (res) => {
     let lis = ''; 
     res.forEach(el => {
@@ -27,7 +26,11 @@ const handleRes = (res) => {
     let html = `<ul>${lis}</ul>`;
     $F('.output').innerHTML = html;
 };
-
+// function turnGreen(it){
+//     it.style.color = 'white'
+//     it.style.backgroundColor = 'green';
+//   }
+// $FX('li', turnGreen);
 // Swordfish methods
 // GET METHODS
 // .get(url, fn) - fetch data from url and handle response with callback - fn;
@@ -44,6 +47,8 @@ http.get(url3).then(handleRes);
 // \/  \/  \/  
 // http.getRaw('https://jsonplaceholder.typicode.com/posts', handleResponse);
 
+  
+  
 
 // POST METHOD
 // const newUser = {
