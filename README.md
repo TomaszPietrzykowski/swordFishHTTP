@@ -3,7 +3,6 @@
 #### custom, light-weight, frontend HTTP library
 current version 0.1.0
 # 
-#
 Provides short and convenient syntax in a form of set of methods for web API based projects. Supports fetch and xhr, offers handy way of handling onprogress method (spinners, loaders), comes with built-in loader and toolbox of DOM manippulation methods.
 # 
 ______________
@@ -35,10 +34,14 @@ const yourVar = new SwordFish;
 ___________
 ## Availaible methods
 # 
+DOM manipulation methods:
 * $F()
-* $FA()
+* $FAll()
 * $FX()
 * $FE()
+* $FShow()
+* $FClass()
+HTTP methods:
 * .get()
 * .getXHR()
 * .getSome()
@@ -52,13 +55,15 @@ ___________
 * .loader()
 #
 _____________
-# DOM MANIPULATION METHODS - $wordFish Selectors
+# DOM METHODS
+# SwordFish Selectors: $F
+All of **$F** methods are availaible without initializing new SwordFish
 _____________
 # 
-# $F(qSel);
-#### handy syntax for grabbing DOM elements by class, id or element name
-#### takes querySelector string as an argument
-#
+# $F(selector);
+handy syntax for grabbing DOM elements by class, id or element name
+* takes querySelector string as an argument
+* returns a DOM element
 ##### Syntax:
 
 ```javascript
@@ -71,13 +76,64 @@ $F('querySelector');
 
 $F('#title').style.color = 'white;
 
-$F('.buy-btn').addEventListener('click', cb);
+$F('.buy-btn').addEventListener('click', cb); // this can be better done with --> $FE method
 
 this.email = $F('#email-input').value;
 
 const commment = $F('#input-field').value;
 ```
-_$F(id)_ is basicly syntactic sugar for _document.querySelector(id)_. Saves some typing, doesn't it. Just like qurySelector takes string with _.class_ or _#id_ notation. Single DOM element can be passed as well: $F("h1"); If passed element appears in DOM more then ones, only the first element will be returned. For handling multiple elements with element and class name _$FA()_, _$FX()_ or _$FE()_ methods should be used
+**$F(id)** is basicly convenience syntax for **document.querySelector(id)**. Saves some typing, doesn't it. Just like querySelector, takes string with **.class** or **#id** notation. Single DOM element can be passed as well: **$F("h1")**. If passed element appears in DOM more then ones, only the first element will be returned. That allows you to grab first element of many if you wish so. For handling multiple elements we recommend using other **$F_()** methods.
+# 
+_____________
+# 
+# $FAll(selector);
+* takes querySelector or array of querySelectors as an argument
+* returns an array of DOM elements
+##### Syntax:
+
+```javascript
+$FAll('querySelector');
+```
+
+##### Examples:
+
+```javascript
+
+const array = $FAll('.completed');
+
+array.forEach(markDone); // this can be better done with $FX() method...
+
+$FAll('.input-field').forEach(field => field.style.borderColor = 'red';) // ...so can this
+```
+**$FAll(id)** method is more then convenience syntax. It returns a flat array of DOM elements, as oposed to  **document.querySelectorAll(id)** returning DOM Node List. Iterable array will be returned regardless of how many querySelectors were passed. If only single element can be targeted method will return an array with single element. If multiple elements can be targeted with a single selector all of them will be returned in an array. If no argument is passed method will return without executing. Array of queries should be passed like this: **$F(['h4', '.delete', '#submmit'])**. 
+
+##### Examples:
+
+```javascript
+
+arr1 = $FAll('#title');
+
+           // will return:
+
+arr1 = [
+         <h1 id="title">...</h1>
+       ]
+
+
+arr2 = $FAll(['#title', 'div']);
+
+           // will return:
+
+arr2 = [
+         <h1 id="title">..</h1>,
+         <div>..</div>,
+         <div>..</div>,
+         <div>..</div>,
+         <div>..</div>,
+         <div>..</div>
+       ]
+
+```
 # 
 _____________
 # READ RESOURCE METHODS
