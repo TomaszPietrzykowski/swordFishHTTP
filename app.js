@@ -26,17 +26,19 @@ const handleRes = (res) => {
     let html = `<ul>${lis}</ul>`;
     $F('.output').innerHTML = html;
 };
-function turnGreen(it){
-    it.style.color = 'white'
-    it.style.backgroundColor = 'green';
+function turnGreen(e){
+    e.target.style.color = 'white'
+    e.target.style.backgroundColor = 'green';
   }
+
 // $FX('li', turnGreen);
 // Swordfish methods
 // GET METHODS
 // .get(url, fn) - fetch data from url and handle response with callback - fn;
 // \/  \/  \/
 // http.get(url3).then(handleRes);
-$FX(['.other', 'h1', '.second-line'], turnGreen);
+$FE(['h1', '.btn'],'click', turnGreen);
+
 // .getProgress(url, fn1, fn2, fn3) - fetch data from url and handle onprogress function eg. loader
 // fn1 - response handling cb, fn2 - loader init cb, fn3 - loader hide cb
 // returns parsed response object or error obect

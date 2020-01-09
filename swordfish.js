@@ -19,10 +19,10 @@
         return el
     }
     global.$FAll = function(sel){  // returns an iterable array of elements
-        const flatArr = [];
         if (sel === null || typeof sel === 'undefined') {
-          return;
+            return;
         }
+        const flatArr = [];
         // Force an array if a single selector provided
         if (typeof sel !== 'object') {
           sel = [sel];
@@ -36,10 +36,10 @@
         return flatArr;
     }
     global.$FX = function(sel, cb){
-        const flatArr = [];
         if (sel === null || typeof sel === 'undefined') {
-          return;
+            return;
         }
+        const flatArr = [];
         if (typeof sel !== 'object') {
           sel = [sel];
         }
@@ -50,6 +50,24 @@
         })
         // execute callback on each element
         flatArr.forEach(cb);
+    }
+    global.$FE = function(sel, e, cb){
+        if (sel === null || typeof sel === 'undefined') {
+            return;
+        }
+        const flatArr = [];
+        if (typeof sel !== 'object') {
+          sel = [sel];
+        }
+        sel.forEach((qs) => {
+          const nodeList = document.querySelectorAll(`${qs}`);
+          const DOMArr = Array.from(nodeList);
+          DOMArr.forEach((el) => { flatArr.push(el); });
+        })
+        // execute callback on each element
+        flatArr.forEach(el => {
+            el.addEventListener(e, cb);
+        });
     }
     /* 
      *  SwordFish constructor 
