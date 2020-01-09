@@ -38,6 +38,7 @@ ___________
 * $F()
 * $FA()
 * $FX()
+* $FE()
 * .get()
 * .getXHR()
 * .getSome()
@@ -64,19 +65,19 @@ _____________
 $F('querySelector');
 ```
 
-##### Example:
+##### Examples:
 
 ```javascript
-// direct execution
+
 $F('#title').style.color = 'white;
 
-$F('.action-btn').addEventListener('click', cb);
+$F('.buy-btn').addEventListener('click', cb);
 
-// variable assignment
 this.email = $F('#email-input').value;
+
 const commment = $F('#input-field').value;
 ```
-_$F(id)_ is basicly syntactic sugar for _document.querySelector(id)_. Saves some typing, doesn't it. Just like qurySelector takes string with _.class_ or _#id_ notation. Single DOM element can be passed as well: $F("h1"); If passed element appears in DOM more then ones, only the first element will be returned. For handling multiple elements with element and class name _$FA()_ and _$FX()_ methods should be used
+_$F(id)_ is basicly syntactic sugar for _document.querySelector(id)_. Saves some typing, doesn't it. Just like qurySelector takes string with _.class_ or _#id_ notation. Single DOM element can be passed as well: $F("h1"); If passed element appears in DOM more then ones, only the first element will be returned. For handling multiple elements with element and class name _$FA()_, _$FX()_ or _$FE()_ methods should be used
 # 
 _____________
 # READ RESOURCE METHODS
