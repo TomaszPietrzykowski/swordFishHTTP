@@ -10,19 +10,47 @@
 /* 
  * Attach $wordFish Selector methods to window object 
  */
-    global.$F = function(sel){
-      const el = document.querySelector(`${sel}`);
-      return el
+    global.$F = function(sel){  // returns element tagged with querySelector
+        // Don't bother if no value provided
+        if (sel === null || typeof sel === 'undefined') {
+        return;
+        }   
+        const el = document.querySelector(`${sel}`);
+        return el
     }
-    global.$FA = function(sel){
-      const nodeList = document.querySelectorAll(`${sel}`);
-      return Array.from(nodeList)
+    global.$FAll = function(sel){  // returns an iterable array of elements
+        const flatArr = [];
+        if (sel === null || typeof sel === 'undefined') {
+          return;
+        }
+        // Force an array if a single selector provided
+        if (typeof sel !== 'object') {
+          sel = [sel];
+        }
+        // flat out an elements array
+        sel.forEach((qs) => {
+          const nodeList = document.querySelectorAll(`${qs}`);
+          const DOMArr = Array.from(nodeList);
+          DOMArr.forEach((el) => { flatArr.push(el); });
+        })
+        return flatArr;
     }
     global.$FX = function(sel, cb){
-      const nodeList = document.querySelectorAll(`${sel}`);
-      const DOMarray = Array.from(nodeList);
-      DOMarray.forEach(cb);
-      }
+        const flatArr = [];
+        if (sel === null || typeof sel === 'undefined') {
+          return;
+        }
+        if (typeof sel !== 'object') {
+          sel = [sel];
+        }
+        sel.forEach((qs) => {
+          const nodeList = document.querySelectorAll(`${qs}`);
+          const DOMArr = Array.from(nodeList);
+          DOMArr.forEach((el) => { flatArr.push(el); });
+        })
+        // execute callback on each element
+        flatArr.forEach(cb);
+    }
     /* 
      *  SwordFish constructor 
      */

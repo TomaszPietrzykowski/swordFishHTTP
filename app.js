@@ -1,7 +1,7 @@
 // SwordFish.js HTTP Library WorkSheet
 
 // Initialize swordfish
-const http = new SwordFish;
+// const http = new SwordFish;
 // Workbench APIs
 const url1 = 'https://jsonplaceholder.typicode.com/posts';
 const url2 = 'https://jsonplaceholder.typicode.com/todos';
@@ -26,17 +26,17 @@ const handleRes = (res) => {
     let html = `<ul>${lis}</ul>`;
     $F('.output').innerHTML = html;
 };
-// function turnGreen(it){
-//     it.style.color = 'white'
-//     it.style.backgroundColor = 'green';
-//   }
+function turnGreen(it){
+    it.style.color = 'white'
+    it.style.backgroundColor = 'green';
+  }
 // $FX('li', turnGreen);
 // Swordfish methods
 // GET METHODS
 // .get(url, fn) - fetch data from url and handle response with callback - fn;
 // \/  \/  \/
-http.get(url3).then(handleRes);
-
+// http.get(url3).then(handleRes);
+$FX(['.other', 'h1', '.second-line'], turnGreen);
 // .getProgress(url, fn1, fn2, fn3) - fetch data from url and handle onprogress function eg. loader
 // fn1 - response handling cb, fn2 - loader init cb, fn3 - loader hide cb
 // returns parsed response object or error obect
