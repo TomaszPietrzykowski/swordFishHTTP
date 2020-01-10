@@ -27,8 +27,8 @@ const handleRes = (res) => {
     $F('.output').innerHTML = html;
 };
 function turnGreen(e){
-    e.target.style.color = 'white'
-    e.target.style.backgroundColor = 'green';
+    e.style.color = 'white'
+    e.style.backgroundColor = 'green';
   }
 
 // $FX('li', turnGreen);
@@ -37,7 +37,7 @@ function turnGreen(e){
 // .get(url, fn) - fetch data from url and handle response with callback - fn;
 // \/  \/  \/
 // http.get(url3).then(handleRes);
-$FE(['h1', '.btn'],'click', turnGreen);
+// $FE(['h1', '.btn'],'click', turnGreen);
 
 // .getProgress(url, fn1, fn2, fn3) - fetch data from url and handle onprogress function eg. loader
 // fn1 - response handling cb, fn2 - loader init cb, fn3 - loader hide cb
@@ -49,9 +49,8 @@ $FE(['h1', '.btn'],'click', turnGreen);
 // \/  \/  \/  
 // http.getRaw('https://jsonplaceholder.typicode.com/posts', handleResponse);
 
+$FShowTO(2500, '.btn');
   
-  
-
 // POST METHOD
 // const newUser = {
 //     name: 'Jhon',

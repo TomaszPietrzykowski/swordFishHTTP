@@ -49,7 +49,7 @@
           DOMArr.forEach((el) => { flatArr.push(el); });
         })
         // execute callback on each element
-        flatArr.forEach(cb);
+        flatArr.forEach(cb); // cb fn takes an iterator (el) => {..}
     }
     global.$FE = function(sel, e, cb){
         if (sel === null || typeof sel === 'undefined') {
@@ -64,9 +64,79 @@
           const DOMArr = Array.from(nodeList);
           DOMArr.forEach((el) => { flatArr.push(el); });
         })
-        // execute callback on each element
+        // add Event Listener each element
         flatArr.forEach(el => {
             el.addEventListener(e, cb);
+        });
+    }
+    global.$FShow = function(sel, par){
+        if (sel === null || typeof sel === 'undefined') {
+            return;
+        }
+        const flatArr = [];
+        if (typeof sel !== 'object') {
+          sel = [sel];
+        }
+        sel.forEach((qs) => {
+          const nodeList = document.querySelectorAll(`${qs}`);
+          const DOMArr = Array.from(nodeList);
+          DOMArr.forEach((el) => { flatArr.push(el); });
+        })
+        // detect action required on css display attribute
+        flatArr.forEach(el => {
+            if(par===0){ // case: toggle
+                if(el.style.display==='none'){
+                    el.style.display = 'block';
+                } else { 
+                    el.style.display = 'none';
+                }
+            } else if (par){ // case: show
+                console.log('show');
+                if(el.style.display==='none'){
+                el.style.display = 'block';
+                }
+            } else { // case: hide
+                console.log('hide')
+                el.style.display = 'none';
+            }
+        });
+    }
+    global.$FShowTO = function(to, sel, par){
+        if (sel === null || typeof sel === 'undefined') {
+            return;
+        }
+        const flatArr = [];
+        if (typeof sel !== 'object') {
+          sel = [sel];
+        }
+        sel.forEach((qs) => {
+          const nodeList = document.querySelectorAll(`${qs}`);
+          const DOMArr = Array.from(nodeList);
+          DOMArr.forEach((el) => { flatArr.push(el); });
+        })
+        // detect action required on css display attribute
+        flatArr.forEach(el => {
+            if(par===0){ // case: toggle ---------------------------
+                if(el.style.display==='none'){
+                    el.style.display = 'block';
+                    setTimeout(()=>{el.style.display = 'none';}, to);
+                } else { 
+                    let mem = el.style.display;
+                    if(!mem){ mem = 'block' };
+                    el.style.display = 'none';
+                    setTimeout(()=>{el.style.display = mem;}, to); 
+                }
+            } else if (par){ // case: show ---------------------------
+                if(el.style.display==='none'){
+                el.style.display = 'block';
+                setTimeout(()=>{el.style.display = 'none';}, to);
+                } // do nothing since element already displayed
+            } else { // case: hide ------------------------------------
+                let mem = el.style.display;
+                if(!mem){ mem = 'block'; }
+                el.style.display = 'none';
+                setTimeout(()=>{el.style.display = mem;}, to);
+            }
         });
     }
     /* 
